@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotnet_code_challenge.Utilities
+namespace dotnet_code_challenge.DataProcessor
 {
     public interface IDataLoader
     {
