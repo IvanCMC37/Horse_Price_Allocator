@@ -2,11 +2,14 @@
 
 namespace dotnet_code_challenge
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //setup in order to use menu functions
+            var mainMenu = new Menu.MainMenu();
+            mainMenu.run();
         }
     }
 }
+
