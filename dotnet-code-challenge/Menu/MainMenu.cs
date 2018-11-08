@@ -21,14 +21,15 @@ Enter an option: ");
 
                 var input = Console.ReadLine();
 
-
+                //if user input an empty input, program will show that user is already at the bottom sub menu
                 if (string.IsNullOrEmpty(input))
                 {
                     Console.WriteLine("\nYou are already at the bottom of main menu.\n");
                     continue;
                 }
 
-
+                //we only want the user to input a number that is within range of 1 to 3
+                //if user failed, we will ask the user to give another input
                 if (!int.TryParse(input, out var option) || !option.IsWithinRange(1, 3))
                 {
                     Console.WriteLine("\nInvalid input.Please give another input!!!\n");
@@ -36,7 +37,7 @@ Enter an option: ");
                 }
                 Console.WriteLine();
 
-
+                //different options lead to different functions
                 switch (option)
                 {
                     case 1:
