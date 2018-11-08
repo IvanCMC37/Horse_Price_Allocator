@@ -82,7 +82,7 @@ namespace dotnet_code_challenge.Utilities
                 Horses.Add(new Horse(horseID, horseName, price));
             }
 
-            // print out list in order
+            // print out list in order and output json
             CustomUtilities.DisplayAll(timeStamp, Horses, 2);
         }
     }
