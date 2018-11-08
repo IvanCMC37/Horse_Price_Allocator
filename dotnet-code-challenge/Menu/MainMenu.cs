@@ -5,6 +5,7 @@ namespace dotnet_code_challenge.Menu
 {
     public class MainMenu
     {
+        private JsonLoader JsonLoader = new JsonLoader();
 
         public void run()
         {
@@ -44,6 +45,7 @@ Enter an option: ");
 
                         break;
                     case 2:
+                        JsonLoader.processData();
                         break;
                     case 3:
                         Console.WriteLine("Goodbye, see you next time!");
