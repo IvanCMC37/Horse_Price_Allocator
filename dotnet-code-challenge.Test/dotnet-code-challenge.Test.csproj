@@ -25,14 +25,4 @@
     <ProjectReference Include="..\dotnet-code-challenge\dotnet-code-challenge.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Output\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="dotnet_code_challenge">
-      <HintPath>..\dotnet-code-challenge\bin\Debug\netcoreapp2.0\dotnet_code_challenge.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
