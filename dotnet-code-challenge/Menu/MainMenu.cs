@@ -6,6 +6,7 @@ namespace dotnet_code_challenge.Menu
     public class MainMenu
     {
         private JsonLoader JsonLoader = new JsonLoader();
+        private XmlLoader XmlLoader = new XmlLoader();
 
         public void run()
         {
@@ -42,7 +43,7 @@ Enter an option: ");
                 switch (option)
                 {
                     case 1:
-
+                        XmlLoader.processData();
                         break;
                     case 2:
                         JsonLoader.processData();

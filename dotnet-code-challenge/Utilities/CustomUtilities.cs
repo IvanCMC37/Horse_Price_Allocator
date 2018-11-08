@@ -17,7 +17,7 @@ namespace dotnet_code_challenge.Utilities
             List<Horse> sortedHorseList = Horses.OrderBy(x => x.Price).ToList();
 
             // define the format of writeline later
-            const string format = "{0,-10}{1,-30}{2,10}";
+            const string format = "{0,-10}{1,-30}{2,10:N1}";
 
             Console.WriteLine("Race DateTime : " + timeStamp);
             Console.WriteLine(format, "HorseID", "HorseName", "Price");
