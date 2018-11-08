@@ -39,7 +39,26 @@ namespace dotnet_code_challenge.Utilities
             // xml object to use later
             XElement root = XElement.Load(filePath);
 
-            assignInfos(root);
+            // perfrom xml data checking eg. should have 2 horse details in 2 sections
+            XmlDocument doc = new XmlDocument();
+            doc.Load(filePath);
+
+            XmlNodeList list_1 = doc.SelectNodes("meeting/races/race/horses/*");
+            int numHorses_1 = list_1.Count;
+
+            XmlNodeList list_2 = doc.SelectNodes("meeting/races/race/prices/price/horses/horse");
+            int numHorses_2 = list_2.Count;
+
+            // only proceed if both number matches
+            if (numHorses_1 == numHorses_2)
+            {
+                assignInfos(root);
+            }
+            else
+            {
+                Console.WriteLine("Xml data is having error");
+                return;
+            }
         }
 
         // function to get price of certain horse number 
