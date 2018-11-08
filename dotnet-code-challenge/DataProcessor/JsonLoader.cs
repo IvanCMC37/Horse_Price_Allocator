@@ -18,7 +18,19 @@ namespace dotnet_code_challenge.Utilities
         // entry function of the loader
         public void processData()
         {
-            Deserialize();
+            // check if the file exist
+            bool fileCheck = File.Exists(filePath);
+
+            // only proceed if file exist
+            if (fileCheck == false)
+            {
+                Console.WriteLine("Couldn't find the given json file!!!");
+                return;
+            }
+            else
+            {
+                Deserialize();
+            }
         }
 
         // function to deserialize data
@@ -32,7 +44,16 @@ namespace dotnet_code_challenge.Utilities
             int numHorses_1 = ((JArray)SteamDetails["RawData"]["Markets"][0]["Selections"]).Count;
             int numHorses_2 = ((JArray)SteamDetails["RawData"]["Participants"]).Count;
 
-            assignInfos(SteamDetails, numHorses_1);
+            // only proceed if both number matches
+            if (numHorses_1 == numHorses_2)
+            {
+                assignInfos(SteamDetails, numHorses_1);
+            }
+            else
+            {
+                Console.WriteLine("Xml data is having error");
+                return;
+            }
         }
 
         // function to assign data to object list
