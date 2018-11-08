@@ -1,11 +1,12 @@
 ﻿using dotnet_code_challenge.Model;
+using dotnet_code_challenge.Utilities;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace dotnet_code_challenge.Utilities
+namespace dotnet_code_challenge.DataProcessor
 {
     public class JsonLoader : IDataLoader
     {

@@ -52,7 +52,7 @@ namespace dotnet_code_challenge.Utilities
                 }
             }
 
-            Console.WriteLine("JSON output saved to ../Output");
+            Console.WriteLine("\nJSON output saved to ../Output");
             Console.WriteLine();
         }
     }

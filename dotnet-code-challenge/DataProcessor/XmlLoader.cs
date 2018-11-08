@@ -1,11 +1,12 @@
 ﻿using dotnet_code_challenge.Model;
+using dotnet_code_challenge.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace dotnet_code_challenge.Utilities
+namespace dotnet_code_challenge.DataProcessor
 {
     public class XmlLoader : IDataLoader
     {
